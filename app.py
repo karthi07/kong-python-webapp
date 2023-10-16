@@ -1,14 +1,12 @@
 import os
 from flask import Flask, request, render_template,redirect, jsonify
 from werkzeug.utils import secure_filename
-from flask_cors import CORS
 
 UPLOAD_FOLDER = './uploads'
 ROOT_URL='http://localhost:8000/app/'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 app = Flask(__name__, static_folder=UPLOAD_FOLDER)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-CORS(app)
 
 cdn_assets = {}  # Dictionary to store uploaded assets
 
