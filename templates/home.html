@@ -1,0 +1,10 @@
+
+<!doctype html>
+<title>Home</title>
+<a href="{{ROOT_URL+ 'upload'}}">Upload new file</a>
+<h2>Available files</h2>
+
+<ul>
+{% for key in cdn_assets %}
+    <li><a href="{{ ROOT_URL+'uploads/' + key }}">{{ key }}</a></li>
+{% endfor %}
